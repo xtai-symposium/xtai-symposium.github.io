@@ -18,6 +18,8 @@
     /* Borders & UI */
     --border-color: #e5e7eb;
     --shadow-color: rgba(0, 0, 0, 0.08);
+
+    --blur-bg: rgba(0, 0, 0, 0.2); /* light */
 }
 
 /* Dark Mode */
@@ -32,6 +34,8 @@
 
     --border-color: #1e293b;
     --shadow-color: rgba(0, 0, 0, 0.5);
+
+    --blur-bg: rgba(255, 255, 255, 0.2); /* dark */
 }
 
 @media (orientation: portrait) {
@@ -174,6 +178,15 @@ ul li::marker {
     font-weight: normal;
     font-size: var(--block-title-size);
     margin-top: 5rem;
+}
+
+#submission_format {
+    background: var(--blur-bg);
+    box-shadow:
+        0 0 0 1px var(--blur-bg),
+        0 0 12px var(--blur-bg);
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
 }
 
 /* Deadline Timeline */
